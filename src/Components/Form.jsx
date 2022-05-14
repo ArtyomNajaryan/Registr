@@ -9,7 +9,7 @@ export let Form = () => {
   const [page, setPage] = useState(0)
 
   const FormTitle = ['Sign Up', 'Email', 'Phone Number', ]
-  const btn = ['Next', 'Create Account', 'Log In']
+  const btn = ['Next', 'Confirm Password', 'Log In']
 
   const FormPages = () => {
     if (page === 0) {
@@ -18,16 +18,16 @@ export let Form = () => {
     else if (page === 1) {
       return <PersonalInfo />
     }
-    else if (page === 2) {
+    else  {
       return <Login />
     }
-    else {
-      return
-    }
+   
   }
   if (page == FormTitle.length) {
     return <Successful/>
   }
+
+  
 
   return <div>
 
